@@ -667,6 +667,46 @@ h2 span,
   color: #7d8997;
   font: 8px 'DM Mono';
 }
+.freelance-card {
+  display: grid;
+  grid-template-columns: 27% 73%;
+  margin-top: 46px;
+  overflow: hidden;
+  border: 1px solid rgba(94, 159, 255, 0.24);
+  border-radius: 13px;
+  background: linear-gradient(140deg, rgba(39, 73, 120, 0.12), #0e1014 55%);
+}
+.freelance-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+  border-right: 1px solid var(--line);
+  color: var(--blue);
+  font: 8px 'DM Mono';
+  letter-spacing: 0.1em;
+}
+.freelance-label b {
+  color: #626d7b;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+.freelance-card > div:last-child {
+  padding: 30px;
+}
+.freelance-card h3 {
+  margin: 0 0 12px;
+  font-size: 23px;
+  letter-spacing: -0.04em;
+}
+.freelance-card p {
+  max-width: 720px;
+  margin: 0;
+  color: #8d95a1;
+  font-size: 12px;
+  line-height: 1.75;
+}
 .timeline {
   position: relative;
 }
@@ -1615,6 +1655,18 @@ footer small {
     display: none;
   }
   .industry-context {
+    padding: 22px;
+  }
+  .freelance-card {
+    grid-template-columns: 1fr;
+  }
+  .freelance-label {
+    gap: 12px;
+    padding: 20px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .freelance-card > div:last-child {
     padding: 22px;
   }
   .case-study {
