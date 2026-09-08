@@ -1,6 +1,6 @@
 # Taufique Ansari — Portfolio
 
-Premium personal portfolio for Taufique Ansari, Senior Frontend Engineer specializing in Angular architecture, real-time IoT/SCADA systems, RxJS, and frontend performance.
+Premium personal portfolio for Taufique Ansari, a Full Stack Developer with 5 years of experience specializing in Angular, Node.js, enterprise systems, frontend performance, and AI-powered applications.
 
 ## Development
 
