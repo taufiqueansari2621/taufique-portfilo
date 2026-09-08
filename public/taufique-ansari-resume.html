@@ -2,168 +2,322 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Taufique Ansari — Resume</title>
     <style>
+      :root {
+        --ink: #172033;
+        --muted: #5f6b7a;
+        --line: #dce2ea;
+        --blue: #2867c8;
+        --soft: #f4f7fb;
+      }
+      * {
+        box-sizing: border-box;
+      }
       body {
+        max-width: 900px;
+        margin: 38px auto;
+        padding: 0 36px;
+        color: var(--ink);
         font:
-          14px/1.55 Arial,
+          13px/1.52 Arial,
           sans-serif;
-        color: #172033;
-        max-width: 820px;
-        margin: 40px auto;
-        padding: 0 28px;
+      }
+      header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 18px;
+        padding-bottom: 22px;
+        border-bottom: 2px solid var(--ink);
       }
       h1 {
-        margin-bottom: 4px;
+        margin: 0;
+        font-size: 31px;
+        letter-spacing: -0.04em;
       }
-      h2 {
-        font-size: 16px;
-        border-bottom: 1px solid #ccd2dc;
-        padding-bottom: 6px;
-        margin-top: 26px;
-      }
-      h3 {
+      .title {
+        margin: 5px 0 0;
+        color: var(--blue);
         font-size: 14px;
-        margin-bottom: 2px;
+        font-weight: 700;
       }
-      p {
-        margin: 5px 0;
-      }
-      ul {
-        margin-top: 6px;
-      }
-      header p {
-        color: #445064;
-      }
-      .meta {
-        display: flex;
-        justify-content: space-between;
-      }
-      .skills {
+      .contact {
+        text-align: right;
+        color: var(--muted);
+        font-size: 11px;
         line-height: 1.8;
       }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .contact a {
+        color: var(--blue);
+      }
+      h2 {
+        margin: 25px 0 10px;
+        color: var(--blue);
+        font-size: 10px;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      h3 {
+        margin: 0;
+        font-size: 14px;
+      }
+      p {
+        margin: 6px 0;
+      }
+      .summary {
+        color: #344154;
+        font-size: 13px;
+      }
+      .job {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 14px;
+        padding: 15px 0;
+        border-top: 1px solid var(--line);
+      }
+      .job:first-of-type {
+        border-top: 0;
+      }
+      .company {
+        color: var(--muted);
+        font-size: 11px;
+      }
+      .date {
+        color: var(--muted);
+        font-size: 11px;
+        white-space: nowrap;
+      }
+      ul {
+        margin: 7px 0 0;
+        padding-left: 18px;
+      }
+      li {
+        margin: 3px 0;
+        color: #344154;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+      }
+      .card {
+        padding: 15px;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        background: var(--soft);
+      }
+      .card h3 {
+        font-size: 13px;
+      }
+      .card p {
+        color: var(--muted);
+        font-size: 11px;
+      }
+      .skills {
+        color: #344154;
+        font-size: 12px;
+      }
+      .skills b {
+        color: var(--ink);
+      }
+      .current {
+        border-left: 3px solid var(--blue);
+        padding-left: 13px;
+      }
+      .note {
+        color: var(--muted);
+        font-size: 10px;
+      }
       @media print {
-        body {
-          margin: 0;
+        @page {
+          margin: 11mm;
+          size: A4;
         }
-        a {
-          color: inherit;
-          text-decoration: none;
+        body {
+          max-width: none;
+          margin: 0;
+          padding: 0;
+          font-size: 11px;
+        }
+        h2 {
+          margin-top: 16px;
+        }
+        .job {
+          padding: 9px 0;
+        }
+        .card {
+          padding: 10px;
+        }
+      }
+      @media (max-width: 620px) {
+        body {
+          margin: 22px auto;
+          padding: 0 20px;
+        }
+        header,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .contact {
+          text-align: left;
+        }
+        .job {
+          grid-template-columns: 1fr;
+          gap: 3px;
+        }
+        .date {
+          white-space: normal;
         }
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Taufique Ansari</h1>
-      <p>Full Stack Engineer · Angular, IoT & AI · Mumbai, India</p>
-      <p>
-        <a href="mailto:taufiqueansari895@gmail.com">taufiqueansari895@gmail.com</a> ·
-        <a href="https://www.linkedin.com/in/taufique-ansari-997965203/">LinkedIn</a>
-      </p>
+      <div>
+        <h1>Taufique Ansari</h1>
+        <p class="title">Frontend Developer · Angular · Industrial IoT · AI Builder</p>
+      </div>
+      <div class="contact">
+        Mumbai, India<br /><a href="mailto:taufiqueansari895@gmail.com"
+          >taufiqueansari895@gmail.com</a
+        ><br /><a href="https://www.linkedin.com/in/taufique-ansari-997965203/"
+          >linkedin.com/in/taufique-ansari-997965203</a
+        >
+      </div>
     </header>
-    <h2>Summary</h2>
-    <p>
-      I’m a frontend-first Full Stack Engineer with 5 years of experience turning complex industrial
-      data into web applications people can actually use. My strongest work is in Angular,
-      TypeScript, RxJS, real-time IoT dashboards, reusable widget platforms, and performance. I also
-      work with Node.js and APIs, and I’m now applying that product-engineering mindset to Python,
-      OpenAI APIs, and permission-aware AI agents. I care about clear interfaces, maintainable code,
-      measurable reliability, and automation that keeps people in control.
+
+    <h2>Profile</h2>
+    <p class="summary">
+      I’m a Frontend Developer with nearly five years of experience building enterprise web
+      applications for industrial IoT. At Faclon Labs, I turn live device, energy, alarm, and
+      operational data into responsive Angular dashboards that are practical for real users. I enjoy
+      solving difficult UI and data-flow problems, building reusable components, and collaborating
+      closely with product, backend, and QA teams. Alongside my frontend work, I’m growing into
+      full-stack and AI development through Node.js, Python, OpenAI APIs, and permission-aware
+      developer tools.
     </p>
+
     <h2>Experience</h2>
-    <div class="meta">
-      <h3>Frontend Developer · Faclon Labs</h3>
-      <p>May 2022 — Present</p>
-    </div>
-    <ul>
-      <li>Build enterprise industrial IoT dashboard applications using Angular and TypeScript.</li>
-      <li>
-        Designed reusable Highcharts widgets, interactive data visualizations, and map-based views
-        for live sensor data and device locations.
-      </li>
-      <li>
-        Built configurable dashboards with dynamic expressions, custom calculations, and rule-based
-        actions for complex business requirements.
-      </li>
-      <li>
-        Helped scale dashboard capacity from approximately 500 to more than 3,000 connected devices
-        while maintaining a responsive user experience.
-      </li>
-      <li>
-        Integrated real-time APIs and data streams to deliver reliable, low-latency applications.
-      </li>
-      <li>Develop reusable React-based widgets for modular use inside Angular micro-frontends.</li>
-      <li>
-        Collaborate with product, backend, and QA teams; contribute to architecture discussions,
-        reviews, planning, mentoring, onboarding, and critical production delivery.
-      </li>
-    </ul>
-    <div class="meta">
-      <h3>Angular Developer Intern · Faclon Labs</h3>
-      <p>Nov 2021 — May 2022</p>
-    </div>
-    <ul>
-      <li>Built Highcharts dashboards to visualize real-time IoT device data and KPIs.</li>
-      <li>Integrated REST APIs and live streams for accurate device information.</li>
-      <li>Debugged production issues and contributed to features and code optimization.</li>
-    </ul>
-    <div class="meta">
-      <h3>Freelance Web Developer</h3>
-      <p>Alongside full-time work</p>
-    </div>
-    <p>
-      Selected independent projects covering responsive business websites, maintainable frontend
-      implementation, REST API integration, performance optimization, and deployment-ready delivery.
-    </p>
+    <section class="job">
+      <div>
+        <h3>Frontend Developer</h3>
+        <p class="company">Faclon Labs · Mumbai, India</p>
+        <ul>
+          <li>
+            Build enterprise industrial IoT dashboards using Angular, TypeScript, REST APIs, and
+            real-time data streams.
+          </li>
+          <li>
+            Create Highcharts widgets, interactive data visualizations, and map-based views for live
+            sensor data and device locations.
+          </li>
+          <li>
+            Build configurable dashboards with expressions, custom calculations, and rule-based
+            actions for varied client requirements.
+          </li>
+          <li>
+            Helped scale dashboard capacity from roughly 500 to more than 3,000 connected devices
+            while maintaining a responsive experience.
+          </li>
+          <li>Develop reusable React widgets for modular use within Angular micro-frontends.</li>
+          <li>
+            Contribute to planning, architecture discussions, code reviews, onboarding, production
+            fixes, and cross-functional delivery.
+          </li>
+        </ul>
+      </div>
+      <div class="date">May 2022 — Present</div>
+    </section>
+    <section class="job">
+      <div>
+        <h3>Angular Developer Intern</h3>
+        <p class="company">Faclon Labs · Mumbai, India</p>
+        <ul>
+          <li>
+            Built Highcharts dashboards to visualize real-time IoT device data and key operational
+            metrics.
+          </li>
+          <li>
+            Integrated REST APIs and live streams to present accurate, responsive device
+            information.
+          </li>
+          <li>
+            Debugged production issues and contributed to feature work, optimization, and code
+            quality.
+          </li>
+        </ul>
+      </div>
+      <div class="date">Nov 2021 — May 2022</div>
+    </section>
+    <section class="job">
+      <div>
+        <h3>Freelance Web Developer</h3>
+        <p class="company">Independent · Alongside full-time work</p>
+        <p>
+          Take on selected web projects involving responsive business websites, maintainable
+          frontend implementation, REST API integration, performance improvements, and
+          deployment-ready handoff.
+        </p>
+      </div>
+    </section>
+
     <h2>Selected Work</h2>
-    <h3>IoT Smart SCADA Dashboard</h3>
-    <p>
-      Real-time industrial monitoring for sensor data, alarms, machine performance, and operational
-      KPIs using Angular, TypeScript, RxJS, MQTT, REST APIs, and SCSS.
-    </p>
-    <h3>Alarm & Reporting System</h3>
-    <p>
-      Industrial platform for active alarm management, acknowledgements, scheduled reports, energy
-      usage, uptime, and fault history.
-    </p>
-    <h3>Configurable IoT Widget Platform</h3>
-    <p>
-      Reusable Angular widget and template architecture that standardized dashboard capabilities,
-      automated repeated setup, and supported multiple IoT products at Faclon Labs.
-    </p>
-    <h3>AI Operations Copilot — Portfolio Lab</h3>
-    <p>
-      Active exploration combining Angular, Node.js, Python, and OpenAI APIs to investigate alarms
-      and telemetry through grounded, source-aware natural-language workflows. This is portfolio
-      research, not a deployed client feature.
-    </p>
-    <h3>Permission-Aware Developer Agent — Current Personal Project</h3>
-    <p>
-      Building an AI developer agent that retains project context, detects code issues, applies
-      scoped fixes, runs validation, and requests explicit user permission before committing or
-      pushing changes to GitHub. Exploring tool calling, working memory, safe action boundaries, and
-      human-in-the-loop workflows with Python and OpenAI APIs.
-    </p>
-    <h2>Technology</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>IoT Smart SCADA Dashboard</h3>
+        <p>
+          Real-time industrial monitoring for sensor data, alarms, machine performance, and
+          operational KPIs using Angular, TypeScript, RxJS, MQTT, REST APIs, and SCSS.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Configurable IoT Widget Platform</h3>
+        <p>
+          Reusable widget and template architecture for KPI, chart, alarm, asset, energy, and
+          reporting experiences across multiple IoT dashboard workflows.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Alarm & Reporting System</h3>
+        <p>
+          Operational workspace for active alarms, acknowledgements, scheduled reports, energy use,
+          uptime, fault history, and live monitoring.
+        </p>
+      </div>
+      <div class="card current">
+        <h3>Permission-Aware Developer Agent</h3>
+        <p>
+          Current personal AI project: retains project context, detects issues, applies scoped
+          fixes, validates results, and asks for explicit approval before Git commits or GitHub
+          pushes.
+        </p>
+      </div>
+    </div>
+
+    <h2>Skills</h2>
     <p class="skills">
-      <strong>Core:</strong> Angular 7–17+, TypeScript, JavaScript, RxJS, React, HTML, CSS, SCSS,
-      Angular Material, Tailwind CSS, Bootstrap<br /><strong>Architecture:</strong> Standalone
-      Components, Signals, OnPush, Lazy Loading, Micro Frontends, Module Federation, Nx<br /><strong
-        >Backend & Data:</strong
+      <b>Frontend:</b> Angular, TypeScript, JavaScript, RxJS, React, Highcharts, HTML5, CSS3, SCSS,
+      Angular Material, Tailwind CSS, Bootstrap<br /><b>Architecture:</b> Reusable components,
+      configurable dashboards, dynamic widgets, micro-frontends, Module Federation, Nx, Signals,
+      OnPush<br /><b>Backend & data:</b> Node.js, Express.js, MongoDB, REST APIs, MQTT, Firebase<br /><b
+        >AI — actively developing:</b
       >
-      Node.js, Express.js, MongoDB, REST APIs, MQTT, Firebase<br /><strong>AI:</strong> Python,
-      OpenAI API, Generative AI, Prompt Engineering, Agentic Workflows, Tool Calling, Context &
-      Memory, Human-in-the-loop Systems<br /><strong>Engineering:</strong>
-      Docker, Git, Jenkins, CI/CD, Jest, Jasmine, Karma
+      Python, OpenAI API, prompt engineering, tool calling, agentic workflows, context and memory,
+      human-in-the-loop systems<br /><b>Engineering:</b> Git, GitHub, Docker, Jenkins, CI/CD, Jest,
+      Jasmine, Karma, Agile
     </p>
+
     <h2>Education & Certifications</h2>
     <p>
-      <strong>Bachelor of Engineering, Computer Science</strong> · North Maharashtra University ·
-      2017–2021 · CGPA 7.83/10
+      <b>Bachelor of Engineering, Computer Science</b> · North Maharashtra University · 2017–2021 ·
+      CGPA 7.83 / 10
     </p>
-    <p>
+    <p class="note">
       Advanced Angular Development — Udemy · React & Node.js Full Stack Development · TypeScript &
       RxJS — FreeCodeCamp
     </p>
