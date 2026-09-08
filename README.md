@@ -17,7 +17,7 @@ Open `http://localhost:4200`.
 npm run build
 ```
 
-The optimized static output is generated in `dist/taufique-portfolio/browser`.
+The optimized static output is generated in `dist`.
 
 ## Tests
 
