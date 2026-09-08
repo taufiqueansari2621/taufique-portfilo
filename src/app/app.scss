@@ -1123,6 +1123,121 @@ h2 span,
   border-color: rgba(94, 159, 255, 0.24);
   background: linear-gradient(145deg, rgba(16, 27, 42, 0.72), #0b0d10 48%);
 }
+.agent-case {
+  border-color: rgba(112, 151, 217, 0.32);
+  background: linear-gradient(140deg, rgba(30, 45, 72, 0.6), #0b0d10 55%);
+}
+.agent-visual {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.5fr 0.75fr;
+  min-height: 355px;
+  overflow: hidden;
+  border: 1px solid #27303b;
+  border-radius: 10px;
+  background: #0a0e13;
+}
+.agent-window {
+  padding: 20px;
+  border-right: 1px solid #222c37;
+}
+.agent-bar {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  color: #6c7886;
+  font: 8px 'DM Mono';
+  letter-spacing: 0.07em;
+}
+.agent-bar b {
+  color: #65d49b;
+  font-weight: 400;
+}
+.agent-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+.agent-steps > div {
+  display: flex;
+  gap: 10px;
+  min-height: 65px;
+  padding: 12px;
+  border: 1px solid #222c37;
+  border-radius: 7px;
+  background: #0f141b;
+}
+.agent-steps i {
+  display: grid;
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  border: 1px solid #46515e;
+  border-radius: 50%;
+  color: #7e8997;
+  font: 10px 'DM Mono';
+  font-style: normal;
+}
+.agent-steps b,
+.agent-steps small {
+  display: block;
+}
+.agent-steps b {
+  color: #c5ccd5;
+  font-size: 10px;
+}
+.agent-steps small {
+  margin-top: 4px;
+  color: #687482;
+  font-size: 8px;
+  line-height: 1.35;
+}
+.agent-steps .done i {
+  border-color: rgba(92, 208, 149, 0.4);
+  color: #67d59c;
+}
+.agent-steps .approval {
+  border-color: rgba(237, 181, 100, 0.38);
+  background: rgba(99, 68, 26, 0.14);
+}
+.agent-steps .approval i {
+  border-color: rgba(237, 181, 100, 0.55);
+  color: #e7b469;
+}
+.agent-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 20px;
+}
+.agent-side > span {
+  margin-bottom: 4px;
+  color: #65717e;
+  font: 8px 'DM Mono';
+  letter-spacing: 0.1em;
+}
+.agent-side div {
+  padding: 13px;
+  border: 1px solid #242e39;
+  border-radius: 7px;
+  background: #0e1319;
+}
+.agent-side small,
+.agent-side b {
+  display: block;
+}
+.agent-side small {
+  color: #607080;
+  font: 7px 'DM Mono';
+  text-transform: uppercase;
+}
+.agent-side b {
+  margin-top: 6px;
+  color: #aeb8c4;
+  font-size: 9px;
+  line-height: 1.5;
+}
 .ai-visual {
   position: relative;
   display: grid;
@@ -1739,6 +1854,18 @@ footer small {
   .ai-actions {
     flex-wrap: wrap;
     padding-left: 0;
+  }
+  .agent-visual {
+    grid-template-columns: 1fr;
+  }
+  .agent-window {
+    border-right: 0;
+  }
+  .agent-side {
+    display: none;
+  }
+  .agent-steps {
+    grid-template-columns: 1fr;
   }
   .skill-group {
     grid-template-columns: 1fr;
