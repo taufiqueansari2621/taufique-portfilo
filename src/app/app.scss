@@ -474,6 +474,57 @@ h2 span,
   grid-template-columns: 1.15fr 0.85fr;
   gap: 100px;
 }
+.about-aside {
+  display: grid;
+  gap: 16px;
+}
+.portrait-card {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(94, 159, 255, 0.24);
+  border-radius: 14px;
+  background: #0d1117;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.3);
+}
+.portrait-card::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  content: '';
+  pointer-events: none;
+}
+.portrait-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.portrait-card figcaption {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 9px;
+  background: rgba(7, 8, 10, 0.76);
+  backdrop-filter: blur(12px);
+}
+.portrait-card figcaption span {
+  font-size: 11px;
+  font-weight: 700;
+}
+.portrait-card figcaption small {
+  color: #718092;
+  font: 7px 'DM Mono';
+  letter-spacing: 0.08em;
+}
 .about-copy {
   padding-left: 34%;
 }
@@ -544,11 +595,19 @@ h2 span,
   gap: 12px;
 }
 .company-line strong,
+.company-line a,
 .company-line small {
   display: block;
 }
-.company-line strong {
+.company-line strong,
+.company-line a {
+  color: #f5f7fa;
   font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.company-line a:hover {
+  color: var(--blue);
 }
 .company-line small {
   color: #727b87;
@@ -569,6 +628,44 @@ h2 span,
   background: #1a355b;
   color: #77adff;
   font: 10px 'DM Mono';
+}
+.industry-context {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 36px 70px;
+  margin-bottom: 54px;
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: radial-gradient(500px 180px at 0 0, rgba(94, 159, 255, 0.1), transparent), #0d1014;
+}
+.industry-context h3 {
+  max-width: 390px;
+  margin: 20px 0 0;
+  font-size: 26px;
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+}
+.industry-context > p {
+  margin: 0;
+  color: #8b95a2;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.domain-tags {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.domain-tags span {
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  color: #7d8997;
+  font: 8px 'DM Mono';
 }
 .timeline {
   position: relative;
@@ -1386,6 +1483,10 @@ footer small {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+  .about-aside {
+    grid-template-columns: minmax(250px, 0.8fr) 1.2fr;
+    align-items: start;
+  }
   .about-copy {
     padding-left: 0;
   }
@@ -1400,6 +1501,13 @@ footer small {
   }
   .timeline:before {
     left: 4px;
+  }
+  .industry-context {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .domain-tags {
+    grid-column: 1;
   }
   .timeline-item {
     grid-template-columns: 20px 1fr;
@@ -1499,6 +1607,15 @@ footer small {
   }
   .company-line > span {
     display: none;
+  }
+  .about-aside {
+    grid-template-columns: 1fr;
+  }
+  .portrait-card figcaption small {
+    display: none;
+  }
+  .industry-context {
+    padding: 22px;
   }
   .case-study {
     padding: 18px;
