@@ -39,7 +39,7 @@
         <p class="intro">Hello, I’m Taufique Ansari.</p>
         <h1>I engineer frontend systems for <span>real-world complexity.</span></h1>
         <p class="hero-lede">
-          Full Stack Developer with 5 years of experience building enterprise applications with
+          Full Stack Engineer with 5 years of experience building enterprise applications with
           Angular, TypeScript, Node.js, and modern web technologies—now expanding into AI-powered
           products with Python and OpenAI APIs.
         </p>
@@ -315,22 +315,22 @@
           <div>
             <span>THE PROBLEM</span>
             <p>
-              Operational teams needed one reliable view across fragmented sensor data, alarms, and
-              plant-level KPIs.
+              High-frequency telemetry, stale device states, alarm bursts, and plant-level KPIs had
+              to remain understandable without overwhelming operators or the browser.
             </p>
           </div>
           <div>
             <span>THE SOLUTION</span>
             <p>
-              A modular Angular interface with reactive streams, reusable widgets, and clear
-              operational hierarchy.
+              A modular Angular interface with reconnect indicators, time-range controls, explicit
+              loading and empty states, reusable widgets, and a clear operational hierarchy.
             </p>
           </div>
           <div>
             <span>ARCHITECTURE</span>
             <p>
-              MQTT and REST data enter RxJS pipelines, normalize into application state, then update
-              optimized OnPush views.
+              MQTT and REST data enter buffered RxJS pipelines, normalize into predictable state,
+              and update OnPush views while throttling non-critical visual refreshes.
             </p>
           </div>
           <div>
@@ -390,18 +390,22 @@
           <div>
             <span>WORKFLOW</span>
             <p>
-              Prioritized event queues turn raw alarms into clear, actionable operator workflows.
+              Severity, site, asset, acknowledgement, and time filters turn alarm bursts into a
+              clear operator queue with traceable state transitions.
             </p>
           </div>
           <div>
             <span>REPORTING</span>
-            <p>Scheduled reports unify energy, uptime, faults, and historical performance.</p>
+            <p>
+              Scheduled and on-demand report jobs unify energy, uptime, faults, and historical
+              performance with visible generation and failure states.
+            </p>
           </div>
           <div>
             <span>ENGINEERING</span>
             <p>
-              Reactive Angular flows keep live state predictable while reusable patterns support
-              future modules.
+              Reactive Angular flows, pagination, timezone-safe dates, and guarded actions keep live
+              state predictable while reusable patterns support future modules.
             </p>
           </div>
         </div>
@@ -470,6 +474,69 @@
             <p>
               A shared library reduces duplicate work, simplifies maintenance, and lets teams
               deliver new IoT experiences faster.
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="case-study compact future-case" data-reveal>
+        <div class="case-meta">
+          <span>FUTURE LAB / 01</span><span>AI · INDUSTRIAL UX · EXPLORATION</span>
+        </div>
+        <div class="case-intro">
+          <div>
+            <h3>AI Operations<br />Copilot</h3>
+            <p>
+              An active portfolio exploration of how operators could investigate alarms and device
+              history using natural language while keeping every answer grounded in approved data.
+            </p>
+          </div>
+          <div class="case-tech">
+            <span>Angular</span><span>Node.js</span><span>Python</span><span>OpenAI API</span
+            ><span>Prompt Engineering</span>
+          </div>
+        </div>
+        <div class="ai-visual">
+          <div class="ai-context">
+            <small>APPROVED CONTEXT</small><span>Alarm history</span><span>Asset metadata</span
+            ><span>Operating procedures</span><span>Telemetry summary</span>
+          </div>
+          <div class="ai-thread">
+            <div class="operator-message">Why did Pump P-104 trigger three alarms today?</div>
+            <div class="copilot-message">
+              <b>AI</b>
+              <p>
+                The alarms followed a temperature rise after the flow rate dropped below its
+                operating range. Review the inlet filter and compare the 10:20–10:45 telemetry
+                window.
+              </p>
+              <small>Based on 3 alarms · 2 telemetry signals · SOP-14</small>
+            </div>
+            <div class="ai-actions">
+              <span>View timeline</span><span>Open asset</span><span>Show sources</span>
+            </div>
+          </div>
+          <p class="visual-label">Portfolio concept · Not a client production feature</p>
+        </div>
+        <div class="case-details three">
+          <div>
+            <span>SAFE BY DESIGN</span>
+            <p>
+              Answers stay grounded in permission-aware operational context, expose sources, and
+              avoid autonomous control actions.
+            </p>
+          </div>
+          <div>
+            <span>FULL-STACK FLOW</span>
+            <p>
+              Angular interaction patterns connect to a Node/Python orchestration layer that
+              prepares context for the OpenAI API.
+            </p>
+          </div>
+          <div>
+            <span>LEARNING DIRECTION</span>
+            <p>
+              This lab demonstrates the product direction I’m actively developing—not a claim about
+              deployed client functionality.
             </p>
           </div>
         </div>
@@ -565,7 +632,7 @@
   </main>
   <footer class="section-wrap">
     <div class="brand"><span class="brand-mark">TA</span><span>Taufique Ansari</span></div>
-    <p>Full Stack Developer · Angular & AI · Mumbai, India</p>
+    <p>Full Stack Engineer · Angular, IoT & AI · Mumbai, India</p>
     <div>
       <a href="mailto:taufiqueansari895@gmail.com">Email</a
       ><a

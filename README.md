@@ -1,6 +1,6 @@
 # Taufique Ansari — Portfolio
 
-Premium personal portfolio for Taufique Ansari, a Full Stack Developer with 5 years of experience specializing in Angular, Node.js, enterprise systems, frontend performance, and AI-powered applications.
+Premium personal portfolio for Taufique Ansari, a Full Stack Engineer with 5 years of experience specializing in Angular, Node.js, real-time IoT systems, frontend performance, and AI-powered applications.
 
 ## Development
 
