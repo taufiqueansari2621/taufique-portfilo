@@ -1,5 +1,13 @@
 # Taufique Ansari — Portfolio
 
+## UI preview
+
+![Taufique Ansari Portfolio interface](docs/previews/github-ui.png)
+
+Actual UI captured from the unchanged public repository served locally. A separate public deployment is not claimed.
+
+[Project screenshots and notes ↗](https://github.com/taufiqueansari2621/project-showcase/blob/main/projects/taufique-portfolio.md) · [More projects ↗](https://github.com/taufiqueansari2621/project-showcase)
+
 Premium personal portfolio for Taufique Ansari, a Full Stack Engineer with 5 years of experience specializing in Angular, Node.js, real-time IoT systems, frontend performance, and AI-powered applications.
 
 ## Development
